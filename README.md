@@ -18,5 +18,5 @@ Virginia,
 West Virginia,
 The District of Columbia** 
 
-**The dataset offers information on the region's electricity consumption in megawatts (MW).**
+The dataset offers information on the region's electricity consumption in megawatts (MW).
 https://www.kaggle.com/datasets/robikscube/hourly-energy-consumption
