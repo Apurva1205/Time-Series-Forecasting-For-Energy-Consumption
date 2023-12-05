@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>XGBoost Prediction App</title>
+</head>
+<body>
+    <div class="container">
+        <h1>XGBoost Prediction App</h1>
+
+        <form method="post" action="/predict">
+       <label for="date_numeric">Enter Date:</label>
+
+            <input type="text" name="date_numeric" id="date_numeric" required>
+            <button type="submit" class="predict-button">Predict</button>
+        </form>
+
+        {% if prediction is defined %}
+            <p class="result">Prediction: {{ prediction }}</p>
+        {% endif %}
+
+        {% if error is defined %}
+            <p class="result">Error: {{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
